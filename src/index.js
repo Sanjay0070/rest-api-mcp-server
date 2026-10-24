@@ -49,6 +49,10 @@ function authenticate(req, res, next) {
   next();
 }
 
+app.get("/", (_req, res) => {
+  res.send("REST API MCP Server is running!");
+});
+
 app.get("/health", (_req, res) => {
   res.json({
     status: "ok",
